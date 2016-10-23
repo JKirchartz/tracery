@@ -3,10 +3,10 @@
  */
 
 var tracery = function() {
-    var rng = Math.random;
+    var random = Math.random;
 
-    var setRng = function setRng(newRng) {
-        rng = newRng;
+    function setRandom(newRandom) {
+        random = newRandom;
     }
 
     var TraceryNode = function(parent, childIndex, settings) {
@@ -580,6 +580,8 @@ var tracery = function() {
         createGrammar : function(raw) {
             return new Grammar(raw);
         },
+
+        setRandom: setRandom,
 
         // Parse the contents of a tag
         parseTag : function(tagContents) {
